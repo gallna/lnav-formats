@@ -8,12 +8,14 @@
                 "module-format": true
             }
         },
+        "body-field": "body",
+        "timestamp-field": "timestamp",
+        "timestamp-format" : ["%Y-%m-%dT%H:%M:%SZ"],
         "value" : {
             "body" : { "kind" : "string" },
             "source" : { "kind" : "string", "identifier" : true },
             "timestamp" : { "kind" : "string", "hidden": true }
         },
-        "timestamp-format" : ["%Y-%m-%dT%H:%M:%SZ"],
         "sample" : [
             {
                 "line" : "2017-08-31T14:31:27Z [not.namenode-2100393612-q] 17/08/31 14:31:27 INFO window.RollingWindowManager: topN size for command setPermission is: 0 "
