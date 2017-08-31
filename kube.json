@@ -54,57 +54,5 @@
             { "line" : "2017-08-31T15:15:40Z ip-10-192-76-101.eu-west-1.compute.internal r-kubernetes-kubelet-4-987e24c7[13633] E0831 15:15:40.874779   13633 kubelet_volumes.go:114] Orphaned pod \"ef34986a-87f5-11e7-8152-02cc7a9d7269\" found, but volume paths are still present on disk." },
             { "line" : "2017-08-31T15:15:40Z ip-10-192-76-35 r-kubernetes-kubelet-1-5dd096f7[26225] E0831 15:15:40.998864   26225 kubelet_volumes.go:114] Orphaned pod \"7c698ae5-82f2-11e7-82b2-02cc7a9d7269\" found, but volume paths are still present on disk." }
         ]
-    },
-    "kube_json" : {
-        "title" : "Kube Json Log Format",
-        "description" : "Log format used in custom logs from kube.",
-        "json": true,
-        "line-format" : [
-            { "field" : "msg", "overflow": "abbrev", "max-width": 60, "align": "left" }, " ",
-             " ",  { "field": "timereported", "timestamp-format": "%Y-%m-%dT%H:%M:%SZ" },
-             " ",  { "field": "hostname", "overflow": "dot-dot", "max-width": 10, "align": "left" },
-             " ",  { "field": "syslogtag", "overflow": "dot-dot", "max-width": 10, "align": "left" },
-             " ",  { "field": "inputname", "overflow": "dot-dot", "max-width": 10, "align": "left" },
-             " ",  { "field": "fromhost", "overflow": "dot-dot", "max-width": 10, "align": "left" },
-             " ",  { "field": "fromhost-ip", "overflow": "dot-dot", "max-width": 10, "align": "left"  },
-             " ",  { "field": "pri" },
-             " ",  { "field": "rawmsg", "overflow": "dot-dot", "max-width": 10, "align": "left" },
-             " ",  { "field": "syslogfacility" },
-             " ",  { "field": "syslogseverity" },
-             " ",  { "field": "timegenerated" },
-             " ",  { "field": "programname" },
-             " ",  { "field": "protocol-version" },
-             " ",  { "field": "structured-data" },
-             " ",  { "field": "app-name" },
-             " ",  { "field": "procid" },
-             " ",  { "field": "msgid" },
-             " ",  { "field": "uuid" },
-             " ",  { "field": "$!" }
-        ],
-        "body-field": "msg",
-        "opid-field": "procid",
-        "timestamp-field": "timereported",
-        "timestamp-format" : ["%Y-%m-%dT%H:%M:%SZ"],
-        "value" : {
-            "msg" : { "kind" : "string" },
-            "rawmsg": {  "kind": "string", "hidden": true },
-            "hostname" : { "kind" : "string" },
-            "syslogtag" : { "kind" : "string", "hidden": true },
-            "inputname" : { "kind" : "integer", "hidden": true },
-            "fromhost" : { "kind" : "string", "hidden": true },
-            "fromhost-ip" : { "kind" : "string", "hidden": true },
-            "syslogfacility": {  "kind": "integer" },
-            "syslogseverity": {  "kind": "integer" },
-            "timegenerated": {  "kind": "string" },
-            "programname": {  "kind": "string" },
-            "protocol-version": {  "kind": "integer", "hidden": true },
-            "structured-data": {  "kind": "string" },
-            "app-name": {  "kind": "string", "hidden": true },
-            "procid": {  "kind": "integer", "hidden": true },
-            "msgid": {  "kind": "string", "hidden": true },
-            "pri" : { "kind" : "integer", "hidden": true },
-            "uuid": {  "kind": "string", "hidden": true },
-            "$!": {  "kind": "string", "hidden": true }
-        }
     }
 }
