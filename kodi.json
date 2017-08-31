@@ -1,0 +1,49 @@
+{
+    "kodi_log" : {
+        "title" : "Kodi Log Format",
+        "description" : "Log format used in Kodi.",
+        "url" : "http://kodi.wiki/view/Log_file/Advanced",
+        "regex" : {
+            "std" : {
+                "pattern" : "^(?<timestamp>\\d{2}:\\d{2}:\\d{2}\\.\\d{3})\\s+T:(?<threadid>\\d+)(\\s+M:(?<freemem>\\d+))?\\s+(?<level>\\w+):\\s+(?<message>(?:\\[(?<module>\\w+)\\])?(?<body>.*))$"
+            }
+        },
+        "opid-field" : "module",
+        "level-field" : "level",
+        "level" : {
+          "debug": "DEBUG",
+          "info": "INFO",
+          "stats": "NOTICE",
+          "warning": "WARNING",
+          "error": "ERROR",
+          "fatal": "FATAL"
+        },
+        "value" : {
+            "body" : { "kind" : "string" },
+            "module" : {
+              "kind" : "string",
+              "identifier" : true
+            },
+            "threadid" : {
+                "kind" : "integer",
+                "identifier" : false
+            },
+            "freemem" : {
+                "kind" : "integer",
+                "identifier" : false
+            }
+        },
+        "timestamp-format" : ["%H:%M:%S"],
+        "sample" : [
+            {
+                "line" : "04:21:37.695 T:140348106692352  NOTICE: PulseAudio: Opened device Default in pcm mode with Buffersize 150 ms"
+            },
+            {
+                "line" : "04:21:53.202 T:140348089906944   DEBUG: Previous line repeats 1 times."
+            },
+            {
+                "line" : "04:21:55.979 T:140348055631616   DEBUG: [FanFILM]: ++++++++++YOUTUBE.DL++++++++++ META https://www.rapidvideo.com/?v=l953dspz1"
+            }
+        ]
+    }
+}
