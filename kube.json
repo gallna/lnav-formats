@@ -9,7 +9,6 @@
             }
         },
         "body-field": "body",
-        "module-field:": "source",
         "timestamp-field": "timestamp",
         "timestamp-format" : ["%Y-%m-%dT%H:%M:%SZ"],
         "value" : {
