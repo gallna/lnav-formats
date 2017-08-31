@@ -10,7 +10,10 @@
         },
         "value" : {
             "body" : { "kind" : "string" },
-            "timestamp" : { "kind" : "string", "hidden": true }
+            "module" : {
+              "kind" : "string",
+              "identifier" : true
+            }
         },
         "timestamp-format" : ["%Y-%m-%dT%H:%M:%SZ"],
         "sample" : [

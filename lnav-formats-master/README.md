@@ -9,9 +9,3 @@ This repository is for the log file format descriptions I've written so far.
 
 You can install these by simply checking this directory out in your
 `~/.lnav/formats` directory.
-
-# Install:
-
-`lnav -i git@github.com:gallna/lnav-formats.git`
-
-`curl -sSL https://github.com/gallna/lnav-formats/archive/master.zip > /tmp/f.zip && unzip -d ~/.lnav/formats /tmp/f.zip`
