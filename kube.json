@@ -4,20 +4,13 @@
         "description" : "Log format used in custom logs from kube.",
         "regex" : {
             "std" : {
-                "pattern" : "^(?<timestamp>[\\dTZ:-]+)\\s+(?:\\[(?<source>[^\\]]+)\\])+(?<body>.*)$",
+                "pattern" : "^(?<timestamp>[^ ]+) \\[(?<source>[^\\]]+)\\](?<body>.*)$",
                 "module-format": true
             }
         },
         "body-field": "body",
         "timestamp-field": "timestamp",
-        "timestamp-format" : [
-          "%b %d, %Y %I:%M:%S %p",
-          "%Y-%m-%d %H:%M:%S",
-          "%Y/%m/%d %H:%M:%S",
-          "%Y-%m-%dT%H:%M:%S",
-          "%Y-%m-%d %H:%M:%SZ",
-          "%Y-%m-%dT%H:%M:%SZ"
-        ],
+        "timestamp-format" : ["%Y-%m-%dT%H:%M:%SZ"],
         "value" : {
             "body" : { "kind" : "string" },
             "source" : { "kind" : "string", "identifier" : true },
